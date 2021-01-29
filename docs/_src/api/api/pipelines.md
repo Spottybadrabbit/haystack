@@ -76,6 +76,23 @@ Create a Graphviz visualization of the pipeline.
 
 - `path`: the path to save the image.
 
+<a name="pipeline.Pipeline.load_from_yaml"></a>
+#### load\_from\_yaml
+
+```python
+ | @classmethod
+ | load_from_yaml(cls, path: Path, pipeline_name: Optional[str] = None)
+```
+
+Load Pipeline from a YAML file defining the individual components and how they're tied together to form
+a Pipeline. A single YAML can declare multiple Pipelines, in which case an explicit `pipeline_name` must
+be passed.
+
+**Arguments**:
+
+- `path`: path of the YAML file.
+- `pipeline_name`: if the YAML contains multiple pipelines, the pipeline_name to load must be set.
+
 <a name="pipeline.BaseStandardPipeline"></a>
 ## BaseStandardPipeline Objects
 
